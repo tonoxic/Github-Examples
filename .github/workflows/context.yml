@@ -9,5 +9,7 @@ jobs:
             - name: "Hello World"
               env: 
                 MY_ACTION: ${{github.action}}
+                MY_ACTOR: ${{github.actor}}
               run: echo "Hello World $MY_ACTION"
+              run: echo "Hello World $MY_ACTOR"
               
