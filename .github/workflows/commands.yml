@@ -11,3 +11,10 @@ jobs:
           echo "::group::My group message"
           echo  "Message 1"
           echo "::endgroup::"
+      - name: step one
+        run: |
+          echo "MY_VAL=eggs" >> $GITHUB_ENV
+      - name: step two
+        run: |
+          echo $MY_VAL
+
