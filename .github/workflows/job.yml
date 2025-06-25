@@ -1,0 +1,17 @@
+name: jobs
+
+on: [push]
+
+jobs:
+    job1:
+        runs-on: ubuntu-latest
+        needs: job2
+        steps:
+            - name: step 2
+              run: echo "World"
+
+    job2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: step 1
+              run: echo "Hello"
